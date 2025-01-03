@@ -1,0 +1,146 @@
+[
+    {
+      "id": 1,
+      "question": "Chi è noto come il 'Re del Rock and Roll'?",
+      "answers": [
+        "Mick Jagger",
+        "Elvis Presley",
+        "Freddie Mercury",
+        "Bruce Springsteen"
+      ],
+      "correct": 1
+    },
+    {
+      "id": 2,
+      "question": "Quale band ha pubblicato l'album 'Dark Side of the Moon'?",
+      "answers": [
+        "Led Zeppelin",
+        "Pink Floyd",
+        "Deep Purple",
+        "Queen"
+      ],
+      "correct": 1
+    },
+    {
+      "id": 3,
+      "question": "Quale canzone dei Nirvana è diventata un inno del grunge?",
+      "answers": [
+        "Lithium",
+        "In Bloom",
+        "Come as You Are",
+        "Smells Like Teen Spirit"
+      ],
+      "correct": 3
+    },
+    {
+      "id": 4,
+      "question": "Quale band ha scritto 'Stairway to Heaven'?",
+      "answers": [
+        "Black Sabbath",
+        "AC/DC",
+        "Led Zeppelin",
+        "Eagles"
+      ],
+      "correct": 2
+    },
+    {
+      "id": 5,
+      "question": "Chi era il frontman dei Queen?",
+      "answers": [
+        "Roger Daltrey",
+        "Bono",
+        "Freddie Mercury",
+        "David Bowie"
+      ],
+      "correct": 2
+    },
+    {
+      "id": 6,
+      "question": "Quale band è famosa per l'album 'Nevermind'?",
+      "answers": [
+        "Pearl Jam",
+        "Nirvana",
+        "Soundgarden",
+        "Alice in Chains"
+      ],
+      "correct": 1
+    },
+    {
+      "id": 7,
+      "question": "Quale chitarrista è famoso per aver suonato 'Purple Haze'?",
+      "answers": [
+        "Jimmy Page",
+        "Keith Richards",
+        "Jimi Hendrix",
+        "Eric Clapton"
+      ],
+      "correct": 2
+    },
+    {
+      "id": 8,
+      "question": "Chi è l'autore della canzone 'Imagine'?",
+      "answers": [
+        "John Lennon",
+        "George Harrison",
+        "Paul McCartney",
+        "Ringo Starr"
+      ],
+      "correct": 0
+    },
+    {
+      "id": 9,
+      "question": "Quale band ha scritto 'Hotel California'?",
+      "answers": [
+        "Lynyrd Skynyrd",
+        "Eagles",
+        "Fleetwood Mac",
+        "Boston"
+      ],
+      "correct": 1
+    },
+    {
+      "id": 10,
+      "question": "Quale band è associata al movimento punk rock britannico degli anni '70?",
+      "answers": [
+        "The Beatles",
+        "The Who",
+        "Pink Floyd",
+        "Sex Pistols"
+      ],
+      "correct": 3
+    },
+    {
+      "id": 11,
+      "question": "Chi è il cantante principale dei Rolling Stones?",
+      "answers": [
+        "Rod Stewart",
+        "Eric Clapton",
+        "Mick Jagger",
+        "Keith Richards"
+      ],
+      "correct": 2
+    },
+    {
+      "id": 12,
+      "question": "Quale band ha pubblicato l'album 'Abbey Road'?",
+      "answers": [
+        "The Beatles",
+        "The Who",
+        "The Rolling Stones",
+        "The Kinks"
+      ],
+      "correct": 0
+    },
+    {
+      "id": 13,
+      "question": "Quale band americana ha scritto 'Sweet Home Alabama'?",
+      "answers": [
+        "Creedence Clearwater Revival",
+        "Aerosmith",
+        "The Allman Brothers Band",
+        "Lynyrd Skynyrd"
+      ],
+      "correct": 3
+    }
+  ]
+  

@@ -1,0 +1,15 @@
+/* MAIN */
+#main {
+    background: url("./media/background1.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    margin: 0;
+}
+
+#question, #answers{
+    height: 200px;
+    width: 350px;
+    background-color: white;
+    margin-bottom: 25px;
+}
