@@ -1,10 +1,22 @@
+.center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
 /* MAIN */
 #main {
     background: url("./media/background1.jpg");
     background-size: cover;
     background-position: center;
-    height: 100vh;
+    overflow-y: hidden;
     margin: 0;
+}
+
+#formGame{
+ border: 2px solid white;
+ padding: 35px;
 }
 
 #question, #answers{
@@ -12,4 +24,42 @@
     width: 350px;
     background-color: white;
     margin-bottom: 25px;
+}
+
+#sectionChooselevel{
+    position: absolute;
+    height: 60vh;
+    width: 80vw;
+    background-color: black;  
+}
+
+.displaySectionChooseLevelOff{
+display: none;
+}
+
+.displaySectionChooseLevelOn{
+    display: block;
+    }
+
+.btnChoose{
+    height: 250px;
+    width: 100%;
+}
+
+#btnEasy{
+    background: url("./media/easyBtnImg.jpg");
+    background-position: left;
+    background-size: cover;
+}
+
+#btnMedium{
+    background: url("./media/mediumBtnImg.jpg");
+    background-position: left;
+    background-size: cover;
+}
+
+#btnHard{
+    background: url("./media/hardBtnImg.jpg");
+    background-position: left;
+    background-size: cover;
 }

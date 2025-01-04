@@ -13,13 +13,41 @@
 
 <body>
     <main id="main" class="d-flex flex-column align-items-center justify-content-center">
-      <section>
-        <div id="formGame">
-            <div id="question" class="d-flex flex-column align-items-center justify-content-center p-5"></div>
-            <div id="answers" class="d-flex flex-column align-items-center justify-content-around"></div>
-            <button id="btnNextQuestion">Next</button>
-        </div>
-      </section>
+        <!-- Start Menù -->
+        <section class="vh-100 center position-relative">
+            <h1>MusicRockGame</h1>
+            <p>Music Game del rock!</p>
+            <button id="btnStart">Start Game</button>
+
+            <!-- Choose level -->
+            <div class="container-fluid displaySectionChooseLevelOff" id="sectionChooselevel">
+                <div class="row h-100 w-100 center flex-row justify-content-around">
+                    <div class="col-12">
+                        <h2 class="text-center">CHOOSE LEVEL</h2>
+                    </div>
+                    <div class="col-12 col-md-3 center">
+                        <button class="btnChoose" id="btnEasy" value="easy">Easy</button>
+                    </div>
+                    <div class="col-12 col-md-3 center">
+                        <button class="btnChoose" id="btnMedium" value="medium">Medium</button>
+                    </div>
+                    <div class="col-12 col-md-3 center">
+                        <button class="btnChoose" id="btnHard" value="hard">Hard</button>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+
+        <!-- formGame -->
+        <section class="vh-100 center">
+            <div id="formGame" class="d-flex flex-column align-items-center justify-content-around">
+                <div id="question" class="d-flex flex-column align-items-center justify-content-center p-5"></div>
+                <div id="answers" class="d-flex flex-column align-items-center justify-content-around"></div>
+                <button id="btnNextQuestion">Next</button>
+            </div>
+        </section>
     </main>
 
 

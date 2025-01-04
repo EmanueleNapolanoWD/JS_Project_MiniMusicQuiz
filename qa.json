@@ -8,7 +8,8 @@
         "Freddie Mercury",
         "Bruce Springsteen"
       ],
-      "correct": 1
+      "correct": 1,
+      "level" : "hard"
     },
     {
       "id": 2,
@@ -19,7 +20,8 @@
         "Deep Purple",
         "Queen"
       ],
-      "correct": 1
+      "correct": 1,
+      "level" : "medium"
     },
     {
       "id": 3,
@@ -30,7 +32,8 @@
         "Come as You Are",
         "Smells Like Teen Spirit"
       ],
-      "correct": 3
+      "correct": 3,
+      "level" : "easy"
     },
     {
       "id": 4,
@@ -41,7 +44,8 @@
         "Led Zeppelin",
         "Eagles"
       ],
-      "correct": 2
+      "correct": 2,
+      "level" : "medium"
     },
     {
       "id": 5,
@@ -52,7 +56,8 @@
         "Freddie Mercury",
         "David Bowie"
       ],
-      "correct": 2
+      "correct": 2,
+      "level" : "hard"
     },
     {
       "id": 6,
@@ -63,7 +68,8 @@
         "Soundgarden",
         "Alice in Chains"
       ],
-      "correct": 1
+      "correct": 1,
+      "level" : "hard"
     },
     {
       "id": 7,
@@ -74,7 +80,8 @@
         "Jimi Hendrix",
         "Eric Clapton"
       ],
-      "correct": 2
+      "correct": 2,
+      "level" : "easy"
     },
     {
       "id": 8,
@@ -85,7 +92,8 @@
         "Paul McCartney",
         "Ringo Starr"
       ],
-      "correct": 0
+      "correct": 0,
+      "level" : "medium"
     },
     {
       "id": 9,
@@ -96,7 +104,8 @@
         "Fleetwood Mac",
         "Boston"
       ],
-      "correct": 1
+      "correct": 1,
+      "level" : "medium"
     },
     {
       "id": 10,
@@ -107,7 +116,8 @@
         "Pink Floyd",
         "Sex Pistols"
       ],
-      "correct": 3
+      "correct": 3,
+      "level" : "hard"
     },
     {
       "id": 11,
@@ -118,7 +128,8 @@
         "Mick Jagger",
         "Keith Richards"
       ],
-      "correct": 2
+      "correct": 2,
+      "level" : "easy"
     },
     {
       "id": 12,
@@ -129,7 +140,8 @@
         "The Rolling Stones",
         "The Kinks"
       ],
-      "correct": 0
+      "correct": 0,
+      "level" : "medium"
     },
     {
       "id": 13,
@@ -140,7 +152,8 @@
         "The Allman Brothers Band",
         "Lynyrd Skynyrd"
       ],
-      "correct": 3
+      "correct": 3,
+      "level" : "hard"
     }
   ]
   
