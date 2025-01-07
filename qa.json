@@ -1,159 +1,242 @@
 [
-    {
-      "id": 1,
-      "question": "Chi è noto come il 'Re del Rock and Roll'?",
-      "answers": [
-        "Mick Jagger",
-        "Elvis Presley",
-        "Freddie Mercury",
-        "Bruce Springsteen"
-      ],
-      "correct": 1,
-      "level" : "hard"
-    },
-    {
-      "id": 2,
-      "question": "Quale band ha pubblicato l'album 'Dark Side of the Moon'?",
-      "answers": [
-        "Led Zeppelin",
-        "Pink Floyd",
-        "Deep Purple",
-        "Queen"
-      ],
-      "correct": 1,
-      "level" : "medium"
-    },
-    {
-      "id": 3,
-      "question": "Quale canzone dei Nirvana è diventata un inno del grunge?",
-      "answers": [
-        "Lithium",
-        "In Bloom",
-        "Come as You Are",
-        "Smells Like Teen Spirit"
-      ],
-      "correct": 3,
-      "level" : "easy"
-    },
-    {
-      "id": 4,
-      "question": "Quale band ha scritto 'Stairway to Heaven'?",
-      "answers": [
-        "Black Sabbath",
-        "AC/DC",
-        "Led Zeppelin",
-        "Eagles"
-      ],
-      "correct": 2,
-      "level" : "medium"
-    },
-    {
-      "id": 5,
-      "question": "Chi era il frontman dei Queen?",
-      "answers": [
-        "Roger Daltrey",
-        "Bono",
-        "Freddie Mercury",
-        "David Bowie"
-      ],
-      "correct": 2,
-      "level" : "hard"
-    },
-    {
-      "id": 6,
-      "question": "Quale band è famosa per l'album 'Nevermind'?",
-      "answers": [
-        "Pearl Jam",
-        "Nirvana",
-        "Soundgarden",
-        "Alice in Chains"
-      ],
-      "correct": 1,
-      "level" : "hard"
-    },
-    {
-      "id": 7,
-      "question": "Quale chitarrista è famoso per aver suonato 'Purple Haze'?",
-      "answers": [
-        "Jimmy Page",
-        "Keith Richards",
-        "Jimi Hendrix",
-        "Eric Clapton"
-      ],
-      "correct": 2,
-      "level" : "easy"
-    },
-    {
-      "id": 8,
-      "question": "Chi è l'autore della canzone 'Imagine'?",
-      "answers": [
-        "John Lennon",
-        "George Harrison",
-        "Paul McCartney",
-        "Ringo Starr"
-      ],
-      "correct": 0,
-      "level" : "medium"
-    },
-    {
-      "id": 9,
-      "question": "Quale band ha scritto 'Hotel California'?",
-      "answers": [
-        "Lynyrd Skynyrd",
-        "Eagles",
-        "Fleetwood Mac",
-        "Boston"
-      ],
-      "correct": 1,
-      "level" : "medium"
-    },
-    {
-      "id": 10,
-      "question": "Quale band è associata al movimento punk rock britannico degli anni '70?",
-      "answers": [
-        "The Beatles",
-        "The Who",
-        "Pink Floyd",
-        "Sex Pistols"
-      ],
-      "correct": 3,
-      "level" : "hard"
-    },
-    {
-      "id": 11,
-      "question": "Chi è il cantante principale dei Rolling Stones?",
-      "answers": [
-        "Rod Stewart",
-        "Eric Clapton",
-        "Mick Jagger",
-        "Keith Richards"
-      ],
-      "correct": 2,
-      "level" : "easy"
-    },
-    {
-      "id": 12,
-      "question": "Quale band ha pubblicato l'album 'Abbey Road'?",
-      "answers": [
-        "The Beatles",
-        "The Who",
-        "The Rolling Stones",
-        "The Kinks"
-      ],
-      "correct": 0,
-      "level" : "medium"
-    },
-    {
-      "id": 13,
-      "question": "Quale band americana ha scritto 'Sweet Home Alabama'?",
-      "answers": [
-        "Creedence Clearwater Revival",
-        "Aerosmith",
-        "The Allman Brothers Band",
-        "Lynyrd Skynyrd"
-      ],
-      "correct": 3,
-      "level" : "hard"
-    }
-  ]
-  
+  {
+    "id": 1,
+    "question": "Quale band ha pubblicato l'album 'Abbey Road'?",
+    "answers": [
+      "The Who",
+      "The Rolling Stones",
+      "The Kinks",
+      "The Beatles"
+    ],
+    "correct": 3,
+    "level": "medium"
+  },
+  {
+    "id": 2,
+    "question": "Chi è il cantante principale dei Queen?",
+    "answers": [
+      "Mick Jagger",
+      "David Bowie",
+      "Robert Plant",
+      "Freddie Mercury"
+    ],
+    "correct": 3,
+    "level": "easy"
+  },
+  {
+    "id": 3,
+    "question": "Quale chitarrista è noto per aver suonato con i Guns N' Roses?",
+    "answers": [
+      "Eric Clapton",
+      "Jimi Hendrix",
+      "Jimmy Page",
+      "Slash"
+    ],
+    "correct": 3,
+    "level": "easy"
+  },
+  {
+    "id": 4,
+    "question": "Quale album dei Pink Floyd include la traccia 'Comfortably Numb'?",
+    "answers": [
+      "Animals",
+      "Wish You Were Here",
+      "Dark Side of the Moon",
+      "The Wall"
+    ],
+    "correct": 3,
+    "level": "medium"
+  },
+  {
+    "id": 5,
+    "question": "In quale anno è stato pubblicato l'album 'Nevermind' dei Nirvana?",
+    "answers": [
+      "1993",
+      "1991",
+      "1995",
+      "1989"
+    ],
+    "correct": 1,
+    "level": "medium"
+  },
+  {
+    "id": 6,
+    "question": "Quale band ha scritto la canzone 'Bohemian Rhapsody'?",
+    "answers": [
+      "Led Zeppelin",
+      "The Beatles",
+      "Queen",
+      "The Rolling Stones"
+    ],
+    "correct": 2,
+    "level": "easy"
+  },
+  {
+    "id": 7,
+    "question": "Chi è stato il frontman dei Nirvana?",
+    "answers": [
+      "Layne Staley",
+      "Chris Cornell",
+      "Eddie Vedder",
+      "Kurt Cobain"
+    ],
+    "correct": 3,
+    "level": "easy"
+  },
+  {
+    "id": 8,
+    "question": "Quale strumento suonava John Bonham nei Led Zeppelin?",
+    "answers": [
+      "Chitarra",
+      "Batteria",
+      "Tastiera",
+      "Basso"
+    ],
+    "correct": 1,
+    "level": "medium"
+  },
+  {
+    "id": 9,
+    "question": "Quale canzone dei The Who inizia con 'I woke up in a Soho doorway'?",
+    "answers": [
+      "My Generation",
+      "Baba O'Riley",
+      "Pinball Wizard",
+      "Who Are You"
+    ],
+    "correct": 3,
+    "level": "hard"
+  },
+  {
+    "id": 10,
+    "question": "Qual è il nome del primo album dei Black Sabbath?",
+    "answers": [
+      "Paranoid",
+      "Master of Reality",
+      "Sabbath Bloody Sabbath",
+      "Black Sabbath"
+    ],
+    "correct": 3,
+    "level": "medium"
+  },
+  {
+    "id": 11,
+    "question": "Chi ha scritto la canzone 'Space Oddity'?",
+    "answers": [
+      "Bob Dylan",
+      "David Bowie",
+      "Freddie Mercury",
+      "Elton John"
+    ],
+    "correct": 1,
+    "level": "easy"
+  },
+  {
+    "id": 12,
+    "question": "Quale band ha pubblicato l'album 'Hotel California'?",
+    "answers": [
+      "The Doors",
+      "Fleetwood Mac",
+      "Eagles",
+      "Creedence Clearwater Revival"
+    ],
+    "correct": 2,
+    "level": "easy"
+  },
+  {
+    "id": 13,
+    "question": "Chi è considerato il 'Re del Rock and Roll'?",
+    "answers": [
+      "Chuck Berry",
+      "Elvis Presley",
+      "Buddy Holly",
+      "Little Richard"
+    ],
+    "correct": 1,
+    "level": "easy"
+  },
+  {
+    "id": 14,
+    "question": "Quale band ha scritto l'album 'Appetite for Destruction'?",
+    "answers": [
+      "Motley Crue",
+      "Bon Jovi",
+      "Guns N' Roses",
+      "Aerosmith"
+    ],
+    "correct": 2,
+    "level": "medium"
+  },
+  {
+    "id": 15,
+    "question": "Quale band è famosa per la canzone 'Smoke on the Water'?",
+    "answers": [
+      "Deep Purple",
+      "Cream",
+      "Led Zeppelin",
+      "Black Sabbath"
+    ],
+    "correct": 0,
+    "level": "medium"
+  },
+  {
+    "id": 16,
+    "question": "Chi è stato il chitarrista principale dei Led Zeppelin?",
+    "answers": [
+      "Eric Clapton",
+      "Keith Richards",
+      "Jimmy Page",
+      "Jimi Hendrix"
+    ],
+    "correct": 2,
+    "level": "easy"
+  },
+  {
+    "id": 17,
+    "question": "Quale album dei Radiohead contiene la canzone 'Karma Police'?",
+    "answers": [
+      "OK Computer",
+      "Amnesiac",
+      "Kid A",
+      "The Bends"
+    ],
+    "correct": 0,
+    "level": "hard"
+  },
+  {
+    "id": 18,
+    "question": "Quale canzone dei Queen include il verso 'We will rock you'?",
+    "answers": [
+      "Don't Stop Me Now",
+      "Bohemian Rhapsody",
+      "Another One Bites the Dust",
+      "We Will Rock You"
+    ],
+    "correct": 3,
+    "level": "easy"
+  },
+  {
+    "id": 19,
+    "question": "Quale membro dei Beatles ha scritto 'Imagine'?",
+    "answers": [
+      "Ringo Starr",
+      "George Harrison",
+      "John Lennon",
+      "Paul McCartney"
+    ],
+    "correct": 2,
+    "level": "easy"
+  },
+  {
+    "id": 20,
+    "question": "Quale band è famosa per la canzone 'Born to Be Wild'?",
+    "answers": [
+      "Creedence Clearwater Revival",
+      "The Doors",
+      "Steppenwolf",
+      "The Byrds"
+    ],
+    "correct": 2,
+    "level": "medium"
+  }
+]

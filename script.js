@@ -9,6 +9,9 @@ let divQuestion = document.querySelector('#question');
 let divAnswers = document.querySelector('#answers');
 let btnNextQuestion = document.querySelector('#btnNextQuestion');
 let sectionChooselevel = document.querySelector('#sectionChooselevel');
+let sectionGame = document.querySelector('#sectionGame');
+let btnExitGame = document.querySelector('#btnExitGame');
+let btnRieviwGame = document.querySelector('#btnRieviwGame');
 
 
 // variables
@@ -16,29 +19,35 @@ let score = 0;
 
 fetch('./qa.json').then((response) => response.json()).then((data) => {
     let count = 0;
-    let currentQuestion = data[count];
-    let correct = currentQuestion.correct;
-
 
     function chooseLevel(data) {
+        count = 0;
         btnLevel.forEach((singleBtn) => {
             singleBtn.addEventListener('click', () => {
+                let filteredQuestion = [];
+                sectionGame.style.display = "block";
                 let levelSelected = singleBtn.value;
-                let filteredQuestion = data.filter((question) => question.level == levelSelected);
+                filteredQuestion = data.filter((question) => question.level == levelSelected);
+                console.log(filteredQuestion, count);
                 if (filteredQuestion.length > 0) {
-                    count = 0;
+                    sectionChooselevel.classList.remove('displaySectionChooseLevelOn')
+                    sectionChooselevel.classList.add('displaySectionChooseLevelOff')
                     showQuestion(filteredQuestion);
-                    // nextQuestionButton
-                    btnNextQuestion.addEventListener('click', () => {
+
+                    btnNextQuestion.addEventListener('click',()=>{
                         nextQuestion(filteredQuestion)
-                    });
+                    } );
+
                 } else {
                     console.error('Nessuna domanda trovata per il livello selezionato.');
                 }
+
             });
         })
     }
 
+
+    // function Show Questions&Answers
     function showQuestion(gameData) {
         divQuestion.innerHTML = ``;
         divAnswers.innerHTML = ``;
@@ -51,33 +60,33 @@ fetch('./qa.json').then((response) => response.json()).then((data) => {
         // answers
         gameData[count].answers.forEach((answer, index) => {
             let btnAnswer = document.createElement('button');
-            btnAnswer.classList.add('btn', 'btn-dark')
+            btnAnswer.classList.add('btnAnswers')
             btnAnswer.innerHTML = ` ${answer}`
             btnAnswer.onclick = () => {
-                checkAnswer(index, gameData,btnAnswer)                                 
+                checkAnswer(index, gameData, btnAnswer)
                 btnAnswer.disabled = true
             }
             divAnswers.appendChild(btnAnswer);
         });
-
-
     }
 
-    function checkAnswer(selected, data,btn) {
+
+    // function control answer
+    function checkAnswer(selected, data, btn) {
         let correct = data[count].correct;
         console.log(selected);
 
         if (selected === correct) {
-            console.log("giusto!",score);
+            console.log("giusto!", score);
             score++;
-            btn.style.backgroundColor = "green"           
+            btn.style.backgroundColor = "green"
         } else {
             console.log('Errato!');
             btn.style.backgroundColor = "red"
         }
 
-        let allButton = document.querySelectorAll('.btn');
-        allButton.forEach((btn)=>{
+        let allButton = document.querySelectorAll('.btnAnswers');
+        allButton.forEach((btn) => {
             btn.disabled = true;
         })
 
@@ -85,22 +94,54 @@ fetch('./qa.json').then((response) => response.json()).then((data) => {
 
     function nextQuestion(nextData) {
         count++;
-        console.log(nextData);
-
+        console.log(nextData.length);
         if (count < nextData.length) {
             showQuestion(nextData)
+            console.log(count);
         }
         else {
-            formGame.innerHTML = `<h1> Hai finito il gioco! hai totalizzazto ${score} </h1>`
+            formGame.innerHTML = `<h1> Hai finito il gioco! hai totalizzazto ${score} su ${nextData.length} </h1>`
         }
     }
+
+
+
+    btnExitGame.addEventListener('click', () => {
+        sectionChooselevel.classList.remove('displaySectionChooseLevelOn')
+        sectionChooselevel.classList.add('displaySectionChooseLevelOff');
+        sectionGame.style.display = "none";
+        btnStart.disabled = false;
+        score = 0;
+        count = 0;
+    });
+
+    btnRieviwGame.addEventListener('click', () => {
+        sectionChooselevel.classList.add('displaySectionChooseLevelOn')
+        sectionChooselevel.classList.remove('displaySectionChooseLevelOff');
+        sectionGame.style.display = "none";
+        score = 0;
+        count = 0;
+    });
 
     btnStart.addEventListener('click', () => {
         sectionChooselevel.classList.add('displaySectionChooseLevelOn')
         sectionChooselevel.classList.remove('displaySectionChooseLevelOff');
-        chooseLevel(data)
+        score = 0;
+        count = 0;
+        chooseLevel(data);
     });
+});
 
 
 
-})
+
+
+
+
+
+
+
+
+
+
+
