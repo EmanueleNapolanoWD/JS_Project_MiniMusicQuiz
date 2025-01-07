@@ -20,10 +20,13 @@ let score = 0;
 fetch('./qa.json').then((response) => response.json()).then((data) => {
     let count = 0;
 
+    // Choose Level and Play
     function chooseLevel(data) {
         count = 0;
+        // button Level
         btnLevel.forEach((singleBtn) => {
             singleBtn.addEventListener('click', () => {
+                // reset Question filtrate;
                 let filteredQuestion = [];
                 sectionGame.style.display = "block";
                 let levelSelected = singleBtn.value;
@@ -33,7 +36,6 @@ fetch('./qa.json').then((response) => response.json()).then((data) => {
                     sectionChooselevel.classList.remove('displaySectionChooseLevelOn')
                     sectionChooselevel.classList.add('displaySectionChooseLevelOff')
                     showQuestion(filteredQuestion);
-
                     btnNextQuestion.addEventListener('click',()=>{
                         nextQuestion(filteredQuestion)
                     } );
@@ -64,7 +66,6 @@ fetch('./qa.json').then((response) => response.json()).then((data) => {
             btnAnswer.innerHTML = ` ${answer}`
             btnAnswer.onclick = () => {
                 checkAnswer(index, gameData, btnAnswer)
-                btnAnswer.disabled = true
             }
             divAnswers.appendChild(btnAnswer);
         });
