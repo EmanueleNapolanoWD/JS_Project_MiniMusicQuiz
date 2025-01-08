@@ -62,6 +62,7 @@ fetch('./qa.json')
             divAnswers.innerHTML = ``;
             // question
             let textQuestion = document.createElement('h4');
+            textQuestion.classList.add('TextQuestionGame')
             textQuestion.style.color = "blue";
             textQuestion.innerHTML = ` ${gameData[count].question}`;
             divQuestion.appendChild(textQuestion);
@@ -69,7 +70,7 @@ fetch('./qa.json')
             // answers
             gameData[count].answers.forEach((answer, index) => {
                 let btnAnswer = document.createElement('button');
-                btnAnswer.classList.add('btnAnswers')
+                btnAnswer.classList.add('btnAnswer')
                 btnAnswer.innerHTML = ` ${answer}`
                 btnAnswer.onclick = () => {
                     checkAnswer(index, gameData, btnAnswer)
@@ -98,7 +99,7 @@ fetch('./qa.json')
                 btn.style.backgroundColor = "red"
             }
 
-            let allButton = document.querySelectorAll('.btnAnswers');
+            let allButton = document.querySelectorAll('.btnAnswer');
             allButton.forEach((btn) => {
                 btn.disabled = true;
             })

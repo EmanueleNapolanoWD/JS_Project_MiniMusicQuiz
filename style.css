@@ -7,8 +7,9 @@
     --display: "UnifrakturCook", serif;
     --text: "Grenze", serif;
     /* color */
-    --primary:
-        --second: --third:
+        --primary:
+        --second:
+        --third:
 }
 
 h1,
@@ -42,6 +43,10 @@ p {
     margin: 0;
 }
 
+#sectionStartMenu {
+    transition: 1s;
+}
+
 video {
     height: 100%;
     width: 100%;
@@ -49,22 +54,22 @@ video {
     object-fit: cover;
 }
 
-#TitleDisplayIndex{
+#TitleDisplayIndex {
     font-size: 9rem;
 }
 
 @media screen and (max-width:700px) {
-    #TitleDisplayIndex{
+    #TitleDisplayIndex {
         font-size: 4rem;
     }
 }
 
-#textDisplayIndex{
+#textDisplayIndex {
     font-size: 5rem;
 }
 
 @media screen and (max-width:700px) {
-    #textDisplayIndex{
+    #textDisplayIndex {
         font-size: 1.7rem;
     }
 }
@@ -72,10 +77,11 @@ video {
 
 
 #formGame {
-    border: 2px solid white;
     padding: 35px;
-    height: 100%;
-
+    height: 90vh;
+    animation: showgame;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
 }
 
 #sectionGame {
@@ -84,16 +90,25 @@ video {
     display: none;
     width: 70vw;
     height: 80vh;
-    backdrop-filter: blur(7px);
+    backdrop-filter: blur(10px);
+    animation: showgame;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
 }
 
 #question,
 #answers {
     height: 200px;
     width: 95%;
-    background-color: white;
+    border: 2px dashed yellow;
+    backdrop-filter: blur(10px);
     margin-bottom: 25px;
+    animation: showgame;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
 }
+
+
 
 #sectionChooselevel {
     position: absolute;
@@ -101,8 +116,13 @@ video {
     height: 60vh;
     width: 80vw;
     background-color: black;
+    animation: show;
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
     transition: 1s;
 }
+
+
 
 .displaySectionChooseLevelOff {
     display: none;
@@ -112,6 +132,9 @@ video {
     display: block;
 }
 
+
+
+/* buttons */
 
 .btnChoose {
     height: 250px;
@@ -136,11 +159,8 @@ video {
     background-size: cover;
 }
 
-.btnAnswers {
-    width: 75%;
-}
 
-/* buttons */
+
 .bttn {
     display: inline-block;
     padding: 0.9rem 1.8rem;
@@ -171,6 +191,74 @@ video {
 }
 
 .bttn:hover::before {
+    transform: translateX(0);
+}
+
+.bttnExitGame {
+    display: inline-block;
+    padding: 0.9rem 1.8rem;
+    font-size: 16px;
+    font-weight: 700;
+    color: rgb(255, 255, 255);
+    border: 2px solid rgb(0, 0, 0);
+    cursor: pointer;
+    position: relative;
+    background-color: transparent;
+    text-decoration: none;
+    overflow: hidden;
+    z-index: 1;
+    font-family: inherit;
+}
+
+.bttnExitGame::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(255, 0, 0);
+    transform: translateX(-100%);
+    transition: all .3s;
+    z-index: -1;
+}
+
+.bttnReviewGame {
+    display: inline-block;
+    padding: 0.9rem 1.8rem;
+    font-size: 16px;
+    font-weight: 700;
+    color: rgb(0, 0, 0);
+    border: 2px solid rgb(0, 0, 0);
+    cursor: pointer;
+    position: relative;
+    background-color: transparent;
+    text-decoration: none;
+    overflow: hidden;
+    z-index: 1;
+    font-family: inherit;
+}
+
+.bttnReviewGame::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(246, 255, 0);
+    transform: translateX(-100%);
+    transition: all .3s;
+    z-index: -1;
+}
+
+
+
+.bttnExitGame:hover::before {
+    transform: translateX(0);
+}
+
+.bttnReviewGame:hover::before {
     transform: translateX(0);
 }
 
@@ -205,4 +293,47 @@ video {
 
 .bttnNext:hover::before {
     transform: translateX(0);
+}
+
+.TextQuestionGame {
+    font-size: 4rem;
+    animation: showgame;
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
+}
+
+.btnAnswer {
+    height: 60px;
+    width: 250px;
+    border-radius: 25px;
+    margin: 10px;
+    background-color: black;
+    color: white;
+    animation: show;
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
+}
+
+
+/* ANIMATIONS */
+@keyframes show {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes showgame {
+    0% {
+        transform: translatex(-100vw);
+    }
+
+    100% {
+        transform: translate3d(100vw);
+
+    }
+
 }
