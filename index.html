@@ -14,10 +14,13 @@
 
 <body class="vh-100">
     <main id="main" class="d-flex flex-column align-items-center justify-content-center">
+        <video autoplay loop muted>
+            <source src="./media/backIndex.mp4" type="video/mp4">
+        </video>
         <!-- Start Menù -->
-        <section class="vh-100 center position-relative">
-            <h1 class="display-1 text-light">ROCKQUIZ!</h1>
-            <p class="display-1 text-light">Quanto ne sai di ROCK?!?!?!</p>
+        <section class="vh-100 center position-absolute">
+            <h1 id="TitleDisplayIndex">ROCKQUIZ!</h1>
+            <p id="textDisplayIndex">How much do you know about rock?</p>
             <button id="btnStart" class="bttn btn-dark">Start Game</button>
 
             <!-- Choose level -->
@@ -35,19 +38,22 @@
                     <div class="col-12 col-md-3 center">
                         <button class="btnChoose" id="btnHard" value="hard">Hard</button>
                     </div>
+                    <div class="col-12 center">
+                        <button class="btn btn-dark" id="btnQuitChoose">Quit</button>
+                    </div>
                 </div>
             </div>
         </section>
 
 
         <!-- formGame -->
-        <section class="vh-100" id="sectionGame">
+        <section class="max-vh-100 vw-100 center" id="sectionGame">
             <div id="formGame" class="d-flex flex-column align-items-center justify-content-around ">
                 <div id="question" class="d-flex flex-column align-items-center justify-content-center p-5"></div>
                 <div id="answers" class="d-flex flex-column align-items-center justify-content-around"></div>
                 <button id="btnNextQuestion" class="bttnNext">Next</button>
             </div>
-            <div class="center flex-row">
+            <div class="center flex-row mt-3">
                 <button id="btnExitGame" class="btn btn-danger">Esci</button>
                 <button id="btnRieviwGame" class="btn btn-warning">Riavvia</button>
             </div>

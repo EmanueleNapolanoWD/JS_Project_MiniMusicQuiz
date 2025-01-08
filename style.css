@@ -1,4 +1,31 @@
-.center{
+/* cdn font */
+@import url('https://fonts.googleapis.com/css2?family=Grenze:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=UnifrakturCook:wght@700&display=swap');
+
+/* root */
+:root {
+    /* font */
+    --display: "UnifrakturCook", serif;
+    --text: "Grenze", serif;
+    /* color */
+    --primary:
+        --second: --third:
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--display);
+}
+
+p {
+    font-family: var(--text);
+}
+
+
+.center {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -7,77 +34,109 @@
 
 /* MAIN */
 #main {
-    background: url("./media/background1.jpg");
+    height: 100vh;
+    background: url("./media/backIndex.mp4");
     background-size: cover;
     background-position: center;
     overflow-y: hidden;
     margin: 0;
 }
 
-#formGame{
- border: 2px solid white;
- padding: 35px;
- 
+video {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    object-fit: cover;
 }
 
-#sectionGame{
+#TitleDisplayIndex{
+    font-size: 9rem;
+}
+
+@media screen and (max-width:700px) {
+    #TitleDisplayIndex{
+        font-size: 4rem;
+    }
+}
+
+#textDisplayIndex{
+    font-size: 5rem;
+}
+
+@media screen and (max-width:700px) {
+    #textDisplayIndex{
+        font-size: 1.7rem;
+    }
+}
+
+
+
+#formGame {
+    border: 2px solid white;
+    padding: 35px;
+    height: 100%;
+
+}
+
+#sectionGame {
     position: absolute;
     z-index: 3;
     display: none;
     width: 70vw;
     height: 80vh;
     backdrop-filter: blur(7px);
-
 }
 
-#question, #answers{
+#question,
+#answers {
     height: 200px;
     width: 95%;
     background-color: white;
     margin-bottom: 25px;
 }
 
-#sectionChooselevel{
+#sectionChooselevel {
     position: absolute;
     z-index: 2;
     height: 60vh;
     width: 80vw;
-    background-color: black; 
-    transition: 1s; 
+    background-color: black;
+    transition: 1s;
 }
 
-.displaySectionChooseLevelOff{
-display: none;
+.displaySectionChooseLevelOff {
+    display: none;
 }
 
-.displaySectionChooseLevelOn{
+.displaySectionChooseLevelOn {
     display: block;
-    }
+}
 
-.btnChoose{
+
+.btnChoose {
     height: 250px;
     width: 100%;
 }
 
-#btnEasy{
+#btnEasy {
     background: url("./media/easyBtnImg.jpg");
     background-position: left;
     background-size: cover;
 }
 
-#btnMedium{
+#btnMedium {
     background: url("./media/mediumBtnImg.jpg");
     background-position: left;
     background-size: cover;
 }
 
-#btnHard{
+#btnHard {
     background: url("./media/hardBtnImg.jpg");
     background-position: left;
     background-size: cover;
 }
 
-.btnAnswers{
+.btnAnswers {
     width: 75%;
 }
 
@@ -96,9 +155,9 @@ display: none;
     overflow: hidden;
     z-index: 1;
     font-family: inherit;
-   }
-   
-   .bttn::before {
+}
+
+.bttn::before {
     content: "";
     position: absolute;
     left: 0;
@@ -109,13 +168,13 @@ display: none;
     transform: translateX(-100%);
     transition: all .3s;
     z-index: -1;
-   }
-   
-   .bttn:hover::before {
-    transform: translateX(0);
-   }
+}
 
-   .bttnNext {
+.bttn:hover::before {
+    transform: translateX(0);
+}
+
+.bttnNext {
     display: inline-block;
     padding: 0.9rem 1.8rem;
     font-size: 16px;
@@ -129,9 +188,9 @@ display: none;
     overflow: hidden;
     z-index: 1;
     font-family: inherit;
-   }
-   
-   .bttnNext::before {
+}
+
+.bttnNext::before {
     content: "";
     position: absolute;
     left: 0;
@@ -142,8 +201,8 @@ display: none;
     transform: translateX(-100%);
     transition: all .3s;
     z-index: -1;
-   }
-   
-   .bttnNext:hover::before {
+}
+
+.bttnNext:hover::before {
     transform: translateX(0);
-   }
+}
