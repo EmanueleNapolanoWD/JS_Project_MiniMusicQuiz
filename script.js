@@ -10,6 +10,7 @@ let divAnswers = document.querySelector('#answers');
 let btnNextQuestion = document.querySelector('#btnNextQuestion');
 let sectionChooselevel = document.querySelector('#sectionChooselevel');
 let sectionGame = document.querySelector('#sectionGame');
+let esitGame = document.querySelector('#esitGame');
 let btnExitGame = document.querySelector('#btnExitGame');
 let btnRieviwGame = document.querySelector('#btnRieviwGame');
 let btnQuitChoose = document.querySelector('#btnQuitChoose');
@@ -17,9 +18,7 @@ let btnQuitChoose = document.querySelector('#btnQuitChoose');
 
 // variables
 let score = 0;
-let previewSession = null;
 let filteredQuestion = [];
-let isPlaying = false;
 
 
 fetch('./qa.json')
@@ -32,7 +31,7 @@ fetch('./qa.json')
             // button Level
             btnLevel.forEach((singleBtn) => {
                 singleBtn.addEventListener('click', () => {
-                    count = 0;
+                    let count = 0;
                     console.log(count, score);
                     sectionGame.style.display = "block";
                     let levelSelected = singleBtn.value;
@@ -41,11 +40,12 @@ fetch('./qa.json')
                     if (filteredQuestion.length > 0) {
                         sectionChooselevel.classList.remove('displaySectionChooseLevelOn')
                         sectionChooselevel.classList.add('displaySectionChooseLevelOff')
-                        showQuestion(filteredQuestion);                       
+                        showQuestion(filteredQuestion);
                     } else {
                         console.log('Nessuna domanda trovata per il livello selezionato.');
                     }
                 })
+
             })
 
             btnQuitChoose.addEventListener('click', () => {
@@ -58,8 +58,15 @@ fetch('./qa.json')
 
         // function Show Questions&Answers
         function showQuestion(gameData) {
+            divQuestion.classList.remove('d-none')
+            divAnswers.classList.remove('d-none')
+            btnNextQuestion.classList.remove('d-none')
+            divQuestion.classList.add('d-block')
+            divAnswers.classList.add('d-block')
+            btnNextQuestion.classList.add('d-block')
             divQuestion.innerHTML = ``;
             divAnswers.innerHTML = ``;
+            esitGame.innerHTML = ``;
             // question
             let textQuestion = document.createElement('h4');
             textQuestion.classList.add('TextQuestionGame')
@@ -78,10 +85,6 @@ fetch('./qa.json')
                 }
                 divAnswers.appendChild(btnAnswer);
             });
-
-            btnNextQuestion.addEventListener('click', () => {
-                nextQuestion(filteredQuestion)
-            })
         }
 
 
@@ -111,15 +114,17 @@ fetch('./qa.json')
             console.log(nextData.length);
             if (count < nextData.length) {
                 showQuestion(nextData)
+                console.log(nextData);
                 console.log(count);
             }
             else {
-                formGame.innerHTML = `<h1> Hai finito il gioco! hai totalizzazto ${score} su ${nextData.length} </h1>`
+                divQuestion.classList.add('d-none')
+                divAnswers.classList.add('d-none')
+                btnNextQuestion.classList.add('d-none')
+                esitGame.style.display = 'block';
+                esitGame.innerHTML = `<h1> Hai finito il gioco! hai totalizzazto ${score} su ${nextData.length} </h1>`
             }
         }
-
-
-
 
         btnExitGame.addEventListener('click', () => {
             sectionChooselevel.classList.remove('displaySectionChooseLevelOn')
@@ -128,7 +133,6 @@ fetch('./qa.json')
             btnStart.disabled = false;
             score = 0;
             count = 0;
-            filteredQuestion = [];
         });
 
         btnRieviwGame.addEventListener('click', () => {
@@ -137,7 +141,6 @@ fetch('./qa.json')
             sectionGame.style.display = "none";
             score = 0;
             count = 0;
-            filteredQuestion = [];
 
         });
 
@@ -147,6 +150,10 @@ fetch('./qa.json')
             score = 0;
             count = 0;
             chooseLevel(data);
+        });
+
+        btnNextQuestion.addEventListener('click', () => {
+            nextQuestion(filteredQuestion)
         });
     });
 

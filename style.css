@@ -109,6 +109,13 @@ video {
 }
 
 
+#esitGame{
+    position: absolute;
+    display: none;
+    top: 50%;
+}
+
+
 
 #sectionChooselevel {
     position: absolute;
