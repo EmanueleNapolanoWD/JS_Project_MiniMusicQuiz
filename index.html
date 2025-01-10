@@ -12,11 +12,18 @@
     <title>RockQuiz</title>
 </head>
 
-<body class="vh-100">
+
+<body class="min-vh-100">
+
+    <!-- MAIN -->
     <main id="main" class="d-flex flex-column align-items-center justify-content-center">
+
+        <!--Video  background -->
         <video autoplay loop muted>
             <source src="./media/backIndex.mp4" type="video/mp4">
         </video>
+
+
         <!-- Start Menù -->
         <section id="sectionStartMenu" class="vh-100 center position-absolute">
             <h1 id="TitleDisplayIndex">ROCKQUIZ!</h1>
@@ -28,19 +35,25 @@
         <div class="container-fluid displaySectionChooseLevelOff" id="sectionChooselevel">
             <div class="row h-100 w-100 center flex-row justify-content-around">
                 <div class="col-12">
-                    <h2 class="text-center">CHOOSE LEVEL</h2>
+                    <h2 class="text-center" id="textChooseLevel">CHOOSE LEVEL</h2>
                 </div>
                 <div class="col-12 col-md-3 center">
-                    <button class="btnChoose" id="btnEasy" value="easy">Easy</button>
+                    <button class="btnChoose" id="btnEasy" value="easy">
+                        <!-- <span class="rotated-text">Rookie!</span> -->
+                    </button>
                 </div>
                 <div class="col-12 col-md-3 center">
-                    <button class="btnChoose" id="btnMedium" value="medium">Medium</button>
+                    <button class="btnChoose" id="btnMedium" value="medium">
+                        <!-- <span class="rotated-text">Middle</span> -->
+                    </button>
                 </div>
                 <div class="col-12 col-md-3 center">
-                    <button class="btnChoose" id="btnHard" value="hard">Hard</button>
+                    <button class="btnChoose" id="btnHard" value="hard">
+                        <!-- <span class="rotated-text">ROCKSTAR!</span> -->
+                    </button>
                 </div>
-                <div class="col-12 center">
-                    <button class="btn btn-dark" id="btnQuitChoose">Quit</button>
+                <div class="col-12 center mt-3">
+                    <button class="btn btn-light" id="btnQuitChoose">Quit</button>
                 </div>
             </div>
         </div>

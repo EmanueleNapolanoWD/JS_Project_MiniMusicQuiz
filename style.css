@@ -1,16 +1,32 @@
 /* cdn font */
-@import url('https://fonts.googleapis.com/css2?family=Grenze:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=UnifrakturCook:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=RocknRoll+One&family=UnifrakturCook:wght@700&display=swap');
 
 /* root */
 :root {
     /* font */
     --display: "UnifrakturCook", serif;
-    --text: "Grenze", serif;
+    --text: "RocknRoll One", serif;
     /* color */
-        --primary:
-        --second:
-        --third:
+    --primary: black;
+    --second: darkred;
+    --third:
 }
+
+/* GENERAL */
+
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+    pointer-events: none;
+
+}
+
 
 h1,
 h2,
@@ -25,6 +41,12 @@ p {
     font-family: var(--text);
 }
 
+/* test  */
+
+
+
+/* end test  */
+
 
 .center {
     display: flex;
@@ -34,6 +56,7 @@ p {
 }
 
 /* MAIN */
+
 #main {
     height: 100vh;
     background: url("./media/backIndex.mp4");
@@ -56,6 +79,8 @@ video {
 
 #TitleDisplayIndex {
     font-size: 9rem;
+    color: var(--primary);
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.9), 0 0 20px rgba(255, 255, 255, 0.8);
 }
 
 @media screen and (max-width:700px) {
@@ -65,7 +90,10 @@ video {
 }
 
 #textDisplayIndex {
-    font-size: 5rem;
+    font-size: 3rem;
+    color: var(--primary);
+    -webkit-text-stroke: 2px var(--second);
+    padding: 15px;
 }
 
 @media screen and (max-width:700px) {
@@ -74,7 +102,99 @@ video {
     }
 }
 
+#TitleDisplayIndex,
+#textDisplayIndex,
+.bttn {
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: fadeIn 1.5s ease forwards;
+}
 
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+/* CHOOSE LEVEL */
+
+#sectionChooselevel {
+    position: absolute;
+    z-index: 2;
+    min-height: 65vh;
+    width: 80vw;
+    background: rgba(0, 0, 0, 0.7);
+    border: 2px solid rgba(255, 255, 255, 0.8);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+    animation: show;
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
+    transition: 1s;
+}
+
+.rotated-text {
+    display: block;
+    transform: rotate(315deg);
+    font-size: 2.5rem;
+    font-family: var(--text);
+    position: absolute;
+    bottom: 15px;
+    right: -50px;
+    color: var(--second);
+    font-family: var(--text);
+}
+
+
+
+.displaySectionChooseLevelOff {
+    display: none;
+}
+
+.displaySectionChooseLevelOn {
+    display: block;
+}
+
+#textChooseLevel {
+    color: #840000;
+    padding: 20px;
+    text-shadow: 0 0 5px #ff0000, 0 0 10px #ff0000, 0 0 20px #ff3333;
+    font-family: var(--text);
+    animation: rockConcert;
+    animation-iteration-count: infinite;
+    animation-duration: 0.8s;
+
+}
+
+@keyframes rockConcert {
+
+    0%,
+    100% {
+        text-shadow: 0 0 5px #ff0000, 0 0 10px #ff0000, 0 0 20px #ff3333, 0 0 30px #ff9900, 0 0 40px #ff9900;
+        transform: rotate(-1deg) translateX(-2px);
+    }
+
+    25% {
+        text-shadow: 0 0 10px #ff3333, 0 0 20px #ff0000, 0 0 30px #ff9900, 0 0 40px #ff0000, 0 0 50px #ff9900;
+        transform: rotate(1deg) translateX(2px);
+    }
+
+    50% {
+        text-shadow: 0 0 15px #ff0000, 0 0 30px #ff3333, 0 0 45px #ff0000, 0 0 60px #ff9900, 0 0 75px #ff0000;
+        transform: rotate(0deg) translateY(-2px);
+    }
+
+    75% {
+        text-shadow: 0 0 10px #ff9900, 0 0 20px #ff0000, 0 0 30px #ff3333, 0 0 40px #ff9900, 0 0 50px #ff0000;
+        transform: rotate(-1deg) translateY(2px);
+    }
+}
+
+
+/* SECTION GAME */
 
 #formGame {
     padding: 35px;
@@ -109,34 +229,10 @@ video {
 }
 
 
-#esitGame{
+#esitGame {
     position: absolute;
     display: none;
     top: 50%;
-}
-
-
-
-#sectionChooselevel {
-    position: absolute;
-    z-index: 2;
-    height: 60vh;
-    width: 80vw;
-    background-color: black;
-    animation: show;
-    animation-duration: 0.5s;
-    animation-iteration-count: 1;
-    transition: 1s;
-}
-
-
-
-.displaySectionChooseLevelOff {
-    display: none;
-}
-
-.displaySectionChooseLevelOn {
-    display: block;
 }
 
 
@@ -146,38 +242,67 @@ video {
 .btnChoose {
     height: 250px;
     width: 100%;
+    margin: 15px;
+    position: relative;
+}
+
+@media screen and (max-width: 770px) {
+    .btnChoose {
+        height: 150px;
+        width: 100%;
+        margin: 15px;
+        position: relative;
+    }
 }
 
 #btnEasy {
     background: url("./media/easyBtnImg.jpg");
-    background-position: left;
+    background-position: top;
     background-size: cover;
+
+}
+
+#btnEasy:hover {
+    box-shadow: 0 0 20px rgba(0, 255, 38, 0.8);
+    transition: box-shadow 0.3s ease;
 }
 
 #btnMedium {
     background: url("./media/mediumBtnImg.jpg");
-    background-position: left;
+    background-position: top;
     background-size: cover;
+}
+
+#btnMedium:hover {
+    box-shadow: 0 0 30px rgba(255, 0, 200, 0.8);
+    transition: box-shadow 0.3s ease;
 }
 
 #btnHard {
     background: url("./media/hardBtnImg.jpg");
-    background-position: left;
+    background-position: top;
     background-size: cover;
+}
+
+#btnHard:hover {
+    box-shadow: 0 0 40px rgba(255, 0, 0, 0.8);
+    transition: box-shadow 0.3s ease;
 }
 
 
 
 .bttn {
     display: inline-block;
+    height: 50px;
+    width: 200px;
     padding: 0.9rem 1.8rem;
-    font-size: 16px;
+    font-size: 1.2rem;
     font-weight: 700;
     color: white;
+    background-color: var(--second);
     border: 2px solid darkred;
     cursor: pointer;
     position: relative;
-    background-color: transparent;
     text-decoration: none;
     overflow: hidden;
     z-index: 1;

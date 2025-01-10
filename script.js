@@ -1,4 +1,6 @@
 // capture element
+let titleMain = document.querySelector('#TitleDisplayIndex')
+let textMain = document.querySelector('#textDisplayIndex')
 let btnStart = document.querySelector('#btnStart');
 let btnLevel = Array.from(document.querySelectorAll('.btnChoose'));
 let btnLevelEasy = document.querySelector('#btnEasy')
@@ -45,14 +47,6 @@ fetch('./qa.json')
                         console.log('Nessuna domanda trovata per il livello selezionato.');
                     }
                 })
-
-            })
-
-            btnQuitChoose.addEventListener('click', () => {
-                sectionChooselevel.classList.remove('displaySectionChooseLevelOn')
-                sectionChooselevel.classList.add('displaySectionChooseLevelOff');
-                sectionGame.style.display = "none";
-                btnStart.disabled = false;
             })
         }
 
@@ -127,6 +121,9 @@ fetch('./qa.json')
         }
 
         btnExitGame.addEventListener('click', () => {
+            titleMain.classList.remove('d-none');
+            textMain.classList.remove('d-none');
+            btnStart.classList.remove('d-none');
             sectionChooselevel.classList.remove('displaySectionChooseLevelOn')
             sectionChooselevel.classList.add('displaySectionChooseLevelOff');
             sectionGame.style.display = "none";
@@ -134,6 +131,16 @@ fetch('./qa.json')
             score = 0;
             count = 0;
         });
+
+        btnQuitChoose.addEventListener('click', () => {
+            titleMain.classList.remove('d-none');
+            textMain.classList.remove('d-none');
+            btnStart.classList.remove('d-none');
+            sectionChooselevel.classList.remove('displaySectionChooseLevelOn')
+            sectionChooselevel.classList.add('displaySectionChooseLevelOff');
+            sectionGame.style.display = "none";
+            btnStart.disabled = false;
+        })
 
         btnRieviwGame.addEventListener('click', () => {
             sectionChooselevel.classList.add('displaySectionChooseLevelOn')
@@ -145,6 +152,9 @@ fetch('./qa.json')
         });
 
         btnStart.addEventListener('click', () => {
+            titleMain.classList.add('d-none');
+            textMain.classList.add('d-none');
+            btnStart.classList.add('d-none');
             sectionChooselevel.classList.add('displaySectionChooseLevelOn')
             sectionChooselevel.classList.remove('displaySectionChooseLevelOff');
             score = 0;
